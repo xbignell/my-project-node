@@ -10,7 +10,7 @@ exports.findAllcontacts = function(req, res) {
 
 exports.addContact = function(req, res) {
     var contactTest = new contactEntrypoint({
-        textConcept: req.body.textConcept,
+        textContent: req.body.textContent,
         name: req.body.name,
         email: req.body.email,
         numberPhone: req.body.numberPhone,
