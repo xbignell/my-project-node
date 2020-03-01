@@ -2,11 +2,13 @@ var express = require("express"),
     app = express(),
     bodyParser  = require("body-parser"),
     methodOverride = require("method-override"),
-    mongoose = require("mongoose");
+    mongoose = require("mongoose"),
+    cors = require('cors');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
+app.use(cors());
 
 require('./models/contact')(app, mongoose);
 var Contact = require('./controllers/contact-entrypoint');
